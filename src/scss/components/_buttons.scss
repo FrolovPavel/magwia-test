@@ -4,6 +4,7 @@
   padding: 0;
 
   &--gold {
+    position: relative;
     height: 60px;
     background-color: $gold;
     transform: skew(-17deg);
@@ -24,7 +25,7 @@
       position: absolute;
       background-color: $white;
       width: 6px;
-      height: 60px;
+      height: 100%;
       top: 0;
       right: -10px;
       transition: 0.25s right;
@@ -39,7 +40,21 @@
     }
 
     &--small {
-      padding: 17px 23px;
+      width: 206px;
+      height: 47px;
+
+      @media (max-width: 767px) {
+        &::after {
+          width: 5px;
+          right: -8px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        width: 265px;
+        height: 60px;
+        padding: 21px 69px;
+      }
     }
 
     &--full {
