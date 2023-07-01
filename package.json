@@ -2,7 +2,7 @@
   "name": "magwai-test",
   "version": "1.0.0",
   "description": "",
-  "main": "src/js/index.js",
+  "main": "src/index.js",
   "scripts": {
     "dev": "webpack serve",
     "start": "webpack",
@@ -21,11 +21,11 @@
     "node-sass": "^9.0.0",
     "sass": "^1.63.6",
     "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "svg-sprite-loader": "^6.0.11",
+    "svgo-loader": "^4.0.0",
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
-  },
-  "dependencies": {
-    "style-loader": "^3.3.3"
   }
 }

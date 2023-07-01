@@ -1,0 +1,64 @@
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: 0;
+
+  &--gold {
+    height: 60px;
+    background-color: $gold;
+    transform: skew(-17deg);
+    transition: 0.25s background-color, 0.25s color;
+
+    &::before {
+      content: 'оставить заявку';
+      display: block;
+      transform: skew(17deg);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: $white;
+      width: 6px;
+      height: 60px;
+      top: 0;
+      right: -10px;
+      transition: 0.25s right;
+    }
+
+    &--primary {
+      padding: 21px 28px;
+
+      @media (min-width: 1550px) {
+        padding: 21px 69px;
+      }
+    }
+
+    &--small {
+      padding: 17px 23px;
+    }
+
+    &--full {
+      width: 100%;
+      &::after {
+        content: unset;
+      }
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: $white;
+        color: $gold;
+        &::after {
+          right: -3px;
+        }
+      }
+    }
+
+  }
+}
+

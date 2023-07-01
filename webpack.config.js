@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 
 const mode = process.env.NODE_ENV || 'development'
 const devMode = mode === 'development'
@@ -16,7 +17,7 @@ module.exports = {
     open: true,
     hot: true
   },
-  entry: path.resolve(__dirname, 'src', 'js', 'index.js'),
+  entry: path.resolve(__dirname, 'src', 'index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
@@ -29,7 +30,8 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
-    })
+    }),
+    new SpriteLoaderPlugin()
   ],
   module: {
     rules: [
@@ -50,6 +52,13 @@ module.exports = {
         generator: {
           filename: 'fonts/[name][ext]'
         }
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          'svg-sprite-loader',
+          'svgo-loader'
+        ]
       },
       {
         test: /\.(?:js|mjs|cjs)$/,

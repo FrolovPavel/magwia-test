@@ -1,0 +1,103 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 15px;
+  position: absolute;
+  background-color: $primaryBg;
+  top: 74px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0;
+  opacity: 0;
+  transition: 0.25s height, 0.25s opacity;
+
+  &.active {
+    height: calc(100vh - 69px);
+    opacity: 1;
+
+    @media (max-width: 767px) {
+      .nav__list {
+        & ~ .header__contacts {
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+        }
+      }
+    }
+
+    @media (min-width: 768px) {
+      height: calc(100vh - 110px);
+    }
+  }
+
+  @media (min-width: 768px) {
+    top: 116px;
+    padding: 0;
+  }
+
+  @media (min-width: 1550px) {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    position: relative;
+    top: 0;
+    height: auto;
+    opacity: 1;
+  }
+
+  @media (min-width: 1700px) {
+    margin-right: auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow: auto;
+
+    @media (min-width: 768px) {
+      padding: 55px 50px 20px;
+      & ~ .header__contacts {
+        display: none;
+      }
+    }
+
+    @media (min-width: 1550px) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 42px;
+      padding: 0;
+    }
+  }
+
+  &__link {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    transition: 0.25s color;
+    text-transform: uppercase;
+    color: $primaryBg;
+    text-shadow: -1px 1px 0 $grey, 1px 1px 0 $grey, 1px -1px 0 $grey, -1px -1px 0 $grey;
+
+    @media (min-width: 768px) {
+      font-size: 36px;
+      line-height: 54px;
+    }
+
+    @media (min-width: 1550px) {
+      font-size: 14px;
+      line-height: 21px;
+      color: $white;
+      text-shadow: unset;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: darken($white, 50%);
+      }
+    }
+  }
+}
