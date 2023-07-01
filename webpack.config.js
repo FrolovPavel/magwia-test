@@ -47,7 +47,6 @@ module.exports = {
       },
       {
         test: /\.woff2?$/i,
-        type: 'assets/resource',
         generator: {
           filename: 'fonts/[name][ext]'
         }
