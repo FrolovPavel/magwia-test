@@ -1,0 +1,53 @@
+@import 'card';
+
+.articles {
+  padding: 48px 0;
+
+  &__container {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-align: left;
+
+    @media (min-width: 768px) {
+      font-size: 42px;
+      line-height: 51px;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 1550px) {
+      margin-bottom: 53px;
+    }
+  }
+
+  &__image{
+    display: inline-block;
+    height: 185px;
+  }
+
+  &__wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    margin-bottom: 38px;
+
+    @media (min-width: 768px) {
+      gap: 24px 20px;
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: 1550px) {
+      gap: 30px;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+  }
+}

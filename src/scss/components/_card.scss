@@ -1,0 +1,67 @@
+.card {
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 185px;
+    object-fit: cover;
+  }
+
+  &__wrapper {
+    padding: 25px 24px 30px;
+    background-color: $white;
+    text-align: left;
+  }
+
+  &__title {
+    font-family: 'Mulish', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 1.5px;
+    text-align: left;
+    color: $dark;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: $dark;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $grey;
+    margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 44px;
+    }
+
+    @media (min-width: 1550px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__author {
+    font-size: 12px;
+    line-height: 24px;
+    color: $grey;
+    margin-bottom: 25px;
+
+    span {
+      font-weight: 700;
+      color: $grey;
+    }
+
+    time {
+      color: $grey;
+    }
+  }
+}

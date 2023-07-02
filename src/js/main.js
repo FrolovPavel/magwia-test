@@ -1,2 +1,5 @@
 import './_burger'
+import './_cads'
+import './_modal'
+import './_validations'
 import './_svg'

@@ -13,10 +13,14 @@
   opacity: 0;
   transition: 0.25s height, 0.25s opacity;
 
-  &.active {
+  &.active-nav {
     height: calc(100vh - 69px);
     opacity: 1;
     z-index: 1;
+
+    .nav__list {
+      overflow: auto;
+    }
 
     @media (max-width: 767px) {
       .nav__list {
@@ -56,7 +60,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    overflow: auto;
+
 
     @media (min-width: 768px) {
       padding: 55px 50px 20px;
