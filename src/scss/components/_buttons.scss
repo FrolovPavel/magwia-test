@@ -40,7 +40,7 @@
     }
 
     &--small {
-      width: 206px;
+      width: 205px;
       height: 47px;
 
       &:disabled {
@@ -65,6 +65,11 @@
 
     &--full {
       width: 100%;
+      transform: skew(-20deg);
+
+      &::before {
+        transform: skew(20deg);
+      }
       &::after {
         content: unset;
       }
@@ -121,7 +126,7 @@
     font-family: 'Mulish', sans-serif;
     font-size: 14px;
     font-weight: 600;
-    line-height: 18px;
+    line-height: 16px;
     color: $white;
     transition: 0.25s background-color, 0.25s color;
 

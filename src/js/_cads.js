@@ -44,7 +44,7 @@ function renderCards () {
           <div class="card__wrapper">
               <h3 class="card__title">${card.title}</h3>
               <p class="card__subtitle">
-                  How to increase your productivity with a Music
+                  How to increase your productivity&nbsp;with a Music
               </p>
               <p class="card__text">
                   Sed ut perspiciatis unde omnis iste natus error 

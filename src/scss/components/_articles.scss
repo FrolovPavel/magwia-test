@@ -3,14 +3,31 @@
 .articles {
   padding: 48px 0;
 
+  @media (min-width: 768px) {
+    padding: 45px 0;
+  }
+
+  @media (min-width: 1550px) {
+    padding: 134px 0;
+  }
+
   &__container {
     text-align: center;
+
+    @media (min-width: 768px) {
+      padding: 0 40px;
+    }
+
+    @media (min-width: 768px) {
+      padding: 0 50px;
+    }
   }
 
   &__title {
     font-size: 20px;
     line-height: 24px;
     font-weight: 700;
+    letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 30px;
     text-align: left;
@@ -19,10 +36,13 @@
       font-size: 42px;
       line-height: 51px;
       margin-bottom: 40px;
+      letter-spacing: 1.7px;
+      padding-left: 10px;
     }
 
     @media (min-width: 1550px) {
       margin-bottom: 53px;
+      padding-left: 0;
     }
   }
 
@@ -40,9 +60,11 @@
     @media (min-width: 768px) {
       gap: 24px 20px;
       margin-bottom: 60px;
+      grid-template-columns: repeat(auto-fit, minmax(334px, 1fr));
     }
 
     @media (min-width: 1550px) {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
     }
   }
